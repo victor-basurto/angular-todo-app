@@ -1,0 +1,19 @@
+{
+	"name": "simple-todo-mean-app",
+	"version": "1.0.0",
+	"description": "Simple TODO app from Bogotobogo",
+	"main": "api.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Victor Basurto",
+	"license": "MIT",
+	"dependencies": {
+		"body-parser": "~1.14.1",
+		"dotenv": "^2.0.0",
+		"express": "~4.13.2",
+		"method-override": "~2.3.5",
+		"mongoose": "~3.6.2",
+		"morgan": "~1.6.1"
+	}
+}

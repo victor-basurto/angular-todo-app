@@ -1,0 +1,38 @@
+# Packages #
+###################
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# logs #
+####################
+*.log
+
+# OS Generated Files #
+######################
+.DS_Store
+.DS_Store?
+._*
+._Spotlight-V100
+.Trashes
+ehtumbs.db
+Thumbs.db
+
+# Build Systems #
+######################
+node_modules/
+public/javascripts/libs
+.sass-cache
+*.css-map
+build/
+dist/
+.env
+
+# Extra Data #
+######################
