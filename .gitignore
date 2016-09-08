@@ -32,6 +32,7 @@ public/javascripts/libs
 *.css-map
 build/
 dist/
+oldconfig.txt
 .env
 
 # Extra Data #

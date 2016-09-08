@@ -21,6 +21,7 @@
 
 	<script src="./javascripts/app.js"></script>
 	<script src="./javascripts/controllers/main.ctr.js"></script>
+	<script src="./javascripts/services/todos.fac.js"></script>
 </head>
 <body ng-controller="MainCtrl">
 	<!-- navigation -->
@@ -54,9 +55,16 @@
 				<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
 					<!-- TODO: ng-repeat="todo in todos" -->
 					<div class="checkbox" ng-repeat="todo in todos">
-						<md-checkbox ng-click="deleteTodo(todo._id)">
+						<md-checkbox ng-click="deleteTodo(todo._id)" ng-model="todo.selected" value="{{ todo.text }}" aria-label="todo.text">
 							{{ todo.text }}
 						</md-checkbox>
+						<!-- <label>
+							<input type="checkbox" ng-click="deleteTodo(todo._id)"
+								ng-model="todo.selected"
+								value="{{todo.text}}"
+								aria-label="">
+								{{todo.text}}
+						</label> -->
 					</div><!-- ./ checkbox -->
 				</div><!-- ./ flex offset-->
 			</div><!-- ./ row -->

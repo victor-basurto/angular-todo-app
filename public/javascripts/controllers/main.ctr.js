@@ -1,15 +1,16 @@
 (function() {
 	'use strict';
-	TodoApp.controller('MainCtrl', [ '$scope', '$http', function( $scope, $http ) {
+	TodoApp.controller('MainCtrl', [ '$scope', '$http', 'Todos', function( $scope, $http, Todos ) {
 
 		$scope.formData = {};
+
 
 		/**
 		 * Get data from server
 		 * @param  {Object} `data` - object to be populated
 		 * @return {Callback} - on success, populate object data from server, on error print error
 		 */
-		$http.get( '/api/todos' ).success( function( data ) {
+		Todos.get().success( function( data ) {
 			$scope.todos = data;
 			console.log( data );
 		}).error( function( data ) {
@@ -21,15 +22,24 @@
 		 * @return {Callback} - on success, clear form and populate data, on error print error
 		 */
 		$scope.createTodo = function() {
-			$http.post( '/api/todos', $scope.formData )
-				.success( function( data ) {
-					// clear the form
-					$scope.formData = {};
-					$scope.todos = data;
-					console.log( data );
-				}).error( function( data ) {
-					console.log( 'Error: ' +  data );
-				});
+			if ( !angular.equals( {}, $scope.formData ) ) {
+				Todos.create( $scope.formData )
+					.success( function( data ) {
+						// clear the form
+						$scope.formData = {};
+
+						$scope.todos = data;
+						var cnt = 'added: ' + data[data.length - 1].text;
+
+						/**
+						 * @param {String} `cnt` [String contains text from last item of array
+						 * @param {Number} [delay parameter]
+						 */
+						Todos.showToast( cnt, 2000  );
+					}).error( function( data ) {
+						console.log( 'Error: ' +  data );
+					});
+			}
 		}
 
 		/**
@@ -38,14 +48,13 @@
 		 * @return {Callback} - on success get data, on error print error
 		 */
 		$scope.deleteTodo = function( id ) {
-			$http.delete( '/api/todos/' + id )
+			Todos.deleteTodoData( id )
 				.success( function( data ) {
 					$scope.todos = data;
-					console.log( 'Error: ' + data );
+					Todos.showToast( 'Item deleted', 2000 );
 				}).error( function( data ) {
 					console.log( 'Error: ' + data );
 				});
 		}
-
 	}]);
 })();
