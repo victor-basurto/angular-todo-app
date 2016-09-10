@@ -1,10 +1,14 @@
 {
 	"name": "simple-todo-mean-app",
 	"version": "1.0.0",
-	"description": "Simple TODO app from Bogotobogo",
+	"description": "Simple TODO app with Angular Material - Ref: Bogotobogo",
 	"main": "api.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/victor-basurto/angular-todo-app.git"
 	},
 	"author": "Victor Basurto",
 	"license": "MIT",
@@ -15,5 +19,9 @@
 		"method-override": "~2.3.5",
 		"mongoose": "~3.6.2",
 		"morgan": "~1.6.1"
+	}, 
+	"devDependencies": {
+		"gulp": "~3.9.1",
+		"gulp-sass": "~2.3.2"
 	}
 }

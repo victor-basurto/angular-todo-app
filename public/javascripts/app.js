@@ -16,4 +16,12 @@ TodoApp.config([
 		$mdThemingProvider.theme( 'default' )
 			.primaryPalette( 'teal' )
 			.accentPalette( 'orange' );
+
+	// routing
+	$stateProvider
+		.state( 'todos', {
+			url: '/todos',
+			templateUrl: './templates/todos.tpl.html',
+			controller: 'MainCtrl'
+		});
 }]);

@@ -1,0 +1,21 @@
+/*-----------------------------------------
+	HELPERS import
+--------------------------------------------*/
+@import "ui/variables";
+@import "ng/nganimations";
+
+/*-----------------------------------------
+	Main Config
+--------------------------------------------*/
+html { overflow-y: scroll; }
+body { font-family: 'Roboto', Helvetica Neue; }
+a { text-decoration: none; }
+
+main {
+	.intro-div {
+		background-color: #bdbdbd;
+		text-align: center;
+		
+		.intro-span { border-radius: 5px; }
+	}
+}

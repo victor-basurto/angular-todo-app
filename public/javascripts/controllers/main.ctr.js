@@ -13,8 +13,8 @@
 		Todos.get().success( function( data ) {
 			$scope.todos = data;
 			console.log( data );
-		}).error( function( data ) {
-			console.log( 'Error:' + data );
+		}).error( function( err ) {
+			console.log( 'Error:' + err );
 		});
 
 		/**
@@ -36,8 +36,8 @@
 						 * @param {Number} [delay parameter]
 						 */
 						Todos.showToast( cnt, 2000  );
-					}).error( function( data ) {
-						console.log( 'Error: ' +  data );
+					}).error( function( err ) {
+						console.log( 'Error: ' +  err );
 					});
 			}
 		}
@@ -52,8 +52,8 @@
 				.success( function( data ) {
 					$scope.todos = data;
 					Todos.showToast( 'Item deleted', 2000 );
-				}).error( function( data ) {
-					console.log( 'Error: ' + data );
+				}).error( function( err ) {
+					console.log( 'Error: ' + err );
 				});
 		}
 	}]);
