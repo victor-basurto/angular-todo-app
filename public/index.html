@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./javascripts/libs/angular-material/angular-material.css">
 	<link rel="stylesheet" href="./javascripts/libs/mdi/css/materialdesignicons.min.css" media="all" type="text/css"><!-- material design icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<link rel="stylesheet" href="./stylesheets/css/default.css">
 
@@ -19,8 +20,10 @@
 	<script src="./javascripts/libs/angular-material/angular-material.js"></script>
 	<script src="./javascripts/libs/lodash/dist/lodash.min.js"></script>
 
+	<!-- App -->
 	<script src="./javascripts/app.js"></script>
 	<script src="./javascripts/controllers/main.ctr.js"></script>
+	<script src="./javascripts/controllers/todo-localStorage.ctr.js"></script>
 	<script src="./javascripts/services/todos.fac.js"></script>
 </head>
 <body>
@@ -38,7 +41,9 @@
 		</div><!-- ./ div -->
 	</header><!-- ./ header -->
 
-	<ui-view></ui-view>
+	<main>
+		<ui-view></ui-view>
+	</main>
 	
 </body>
 </html>

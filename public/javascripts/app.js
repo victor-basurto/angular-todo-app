@@ -23,5 +23,9 @@ TodoApp.config([
 			url: '/todos',
 			templateUrl: './templates/todos.tpl.html',
 			controller: 'MainCtrl'
+		}).state( 'todos-local', {
+			url: '/todos-local',
+			templateUrl: './templates/todos-localstorage.tpl.html',
+			controller: 'LocalTodo'
 		});
 }]);

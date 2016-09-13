@@ -18,4 +18,17 @@ main {
 		
 		.intro-span { border-radius: 5px; }
 	}
+	.checkbox {
+		.add-padding {
+			padding-top: 15px;
+		}
+		md-checkbox.md-checked span.underlines {
+			text-decoration: line-through;
+			font-style: italic;
+			color: #BDBDBD;
+		}
+		button.md-warn.md-button {
+			margin: -6px 0 0 0;
+		}
+	}
 }
