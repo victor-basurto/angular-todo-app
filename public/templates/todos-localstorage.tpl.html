@@ -18,7 +18,7 @@
 				<md-checkbox ng-click="checkbox(e)"  ng-model="todo.done" value="{{ todo.text }}" aria-label="todo.text">
 					<span class="underlines">{{ todo.text }}</span>
 				</md-checkbox><!-- ./ md-checkbox -->
-				<md-button md-no-ink class="md-warn" ng-if="todo.done">
+				<md-button md-no-ink class="md-warn" ng-if="todo.done" ng-click="deleteTodo($index)">
 					<md-icon md-font-set="material-icons">delete_forever</md-icon>
 				</md-button><!-- ./ md-button -->
 				<md-divider class="add-padding"></md-divider><!-- divider -->
