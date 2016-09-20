@@ -10,6 +10,28 @@
 			</h1><!-- ./ md-display-2 -->
 		</div><!-- ./ flex offset -->
 	</div><!-- ./ row -->
+
+	<!-- Create TODOs -->
+	<form>
+		<div layout="row" flex>
+			<md-input-container flex="100" 
+				flex-gt-xs="33" 
+				flex-offset-gt-xs="33" 
+				class="md-icon-float md-block">
+				<label>I want to detect/capture dark matter</label>
+				<input type="text" ng-model="formData.text">
+			</md-input-container><!-- ./ md-input-container -->
+			<!-- createTodo() will create new TODO -->
+			<div class="add-button">
+				<md-button md-no-ink 
+					class="md-primary"
+					ng-click="createTodo()">
+					Add
+				</md-button><!-- ./ md-button -->
+			</div><!-- ./ md-button -->
+		</div><!-- ./ row -->
+	</form>
+
 	<!-- TODO list -->
 	<div layout="row">
 		<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
@@ -22,24 +44,4 @@
 			</div><!-- ./ checkbox -->
 		</div><!-- ./ flex offset-->
 	</div><!-- ./ row -->
-
-	<!-- Form to create TODOs -->
-	<form>
-		<div layout="row">
-			<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
-				<md-input-container class="md-block">
-					<label>I want to detect/capture dark matter</label>
-					<input type="text" ng-model="formData.text">
-				</md-input-container>
-				<!-- createTodo() will create new TODO -->
-				<div flex="33" flex-offset="33">
-					<md-button md-no-ink 
-						class="md-primary"
-						ng-click="createTodo()">
-						Add
-					</md-button>
-				</div>
-			</div><!-- ./  flex offset -->
-		</div><!-- ./ row -->
-	</form>
 </md-content><!-- ./ md-content -->

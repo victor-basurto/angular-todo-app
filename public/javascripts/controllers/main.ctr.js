@@ -5,11 +5,9 @@
 		'$http', 
 		'Todos',
 		'DefaultService', 
-		function( $scope, $http, Todos ) {
+		function( $scope, $http, Todos, DefaultService ) {
 
 			$scope.formData = {};
-
-
 			/**
 			 * Get data from server
 			 * @param  {Object} `data` - object to be populated
@@ -34,7 +32,7 @@
 							$scope.formData = {};
 
 							$scope.todos = data;
-							var cnt = 'added: ' + data[data.length - 1].text;
+							var cnt = 'added: ' + data[ data.length - 1 ].text;
 
 							/**
 							 * @param {String} `cnt` [String contains text from last item of array

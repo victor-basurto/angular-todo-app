@@ -8,7 +8,8 @@
 		 * @return {Object}    [if data is available, returned, otherwise send default data]
 		 */
 		function getLocalTodos( currentValues ) {
-			return ( localStorage.getItem( 'todos' ) !== null ) ? JSON.parse( currentValues ) : [{
+			var _TODOS = 'todos';
+			return ( localStorage.getItem( _TODOS ) !== null ) ? JSON.parse( currentValues ) : [{
 				text: 'My Text',
 				done: false
 			}];

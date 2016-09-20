@@ -10,12 +10,35 @@
 			</h1><!-- ./ md-display-2 -->
 		</div><!-- ./ flex offset -->
 	</div><!-- ./ row -->
+
+	<!-- create TODOs -->
+	<form>
+		<div layout="row" flex>
+			<md-input-container flex="100" flex-gt-xs="33" 
+				flex-offset-gt-xs="33" 
+				class="md-icon-float md-block">
+				<label>Add a TODO/Things to do...</label>
+				<input type="text" ng-model="formData.text">
+			</md-input-container><!-- ./md-input-container -->
+			<!-- createTodo() will create new TODO -->
+			<div class="add-button">
+				<md-button md-no-ink 
+					class="md-primary"
+					ng-click="createTodo()">
+					Add
+				</md-button><!-- ./ md-button -->
+			</div><!-- ./ add-button -->
+		</div><!-- ./ row -->
+	</form>
+
 	<!-- TODO list -->
 	<div layout="row">
 		<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
 			<!-- TODO: ng-repeat="todo in todos" -->
 			<div class="checkbox" ng-repeat="todo in todos track by $index">
-				<md-checkbox ng-click="checkbox(e)"  ng-model="todo.done" value="{{ todo.text }}" aria-label="todo.text">
+				<md-checkbox ng-click="checkbox(e)" ng-model="todo.done" 
+					value="{{ todo.text }}" 
+					aria-label="todo.text">
 					<span class="underlines">{{ todo.text }}</span>
 				</md-checkbox><!-- ./ md-checkbox -->
 				<md-button md-no-ink class="md-warn" ng-if="todo.done" ng-click="deleteTodo($index)">
@@ -25,24 +48,4 @@
 			</div><!-- ./ checkbox -->
 		</div><!-- ./ flex offset-->
 	</div><!-- ./ row -->
-
-	<!-- Form to create TODOs -->
-	<form>
-		<div layout="row">
-			<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
-				<md-input-container class="md-block">
-					<label>Add a TODO/Things to do...</label>
-					<input type="text" ng-model="formData.text">
-				</md-input-container>
-				<!-- createTodo() will create new TODO -->
-				<div flex="33" flex-offset="33">
-					<md-button md-no-ink 
-						class="md-primary"
-						ng-click="createTodo()">
-						Add
-					</md-button>
-				</div>
-			</div><!-- ./  flex offset -->
-		</div><!-- ./ row -->
-	</form>
 </md-content><!-- ./ md-content -->
