@@ -21,4 +21,15 @@ Data retrieved from DB its invoked through angular factory and then populated in
 
 Both examples shared same create TODO form, which considered as a widget, it contains its own custom directive.
 
+**images**:
+
+_MongoDB Image_
+
+![alt mongo-db](https://cloud.githubusercontent.com/assets/8467393/18693285/76cd0284-7f55-11e6-9729-d0d5cacbbe13.png)
+
+_LocalStorage Image_
+
+![alt localStorage](https://cloud.githubusercontent.com/assets/8467393/18693275/6f7bbc00-7f55-11e6-8433-f68c6730b15b.png)
+
+
 
