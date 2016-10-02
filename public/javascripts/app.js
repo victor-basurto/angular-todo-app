@@ -12,10 +12,14 @@ var TodoApp = angular.module('TodoApp', ['ngMaterial', 'ui.router']);
 TodoApp.config([
 	'$mdThemingProvider', 
 	'$stateProvider',
-	function( $mdThemingProvider, $stateProvider ) {
+	'$urlRouterProvider',
+	function( $mdThemingProvider, $stateProvider, $urlRouterProvider ) {
 		$mdThemingProvider.theme( 'default' )
 			.primaryPalette( 'teal' )
 			.accentPalette( 'orange' );
+
+	// default url
+	$urlRouterProvider.otherwise('/todos');
 
 	// routing
 	$stateProvider
