@@ -13,10 +13,10 @@
 			 * @param  {Object} `data` - object to be populated
 			 * @return {Callback} - on success, populate object data from server, on error print error
 			 */
-			Todos.get().success( function( data ) {
-				$scope.todos = data;
-				console.log( data );
-			}).error( function( err ) {
+			Todos.get().then( function( res ) {
+				$scope.todos = res;
+				console.log( 'This is the data: ' , res );
+			}, function( err ) {
 				console.log( 'Error:' + err );
 			});
 
@@ -27,19 +27,19 @@
 			$scope.createTodo = function() {
 				if ( !angular.equals( {}, $scope.formData ) ) {
 					Todos.create( $scope.formData )
-						.success( function( data ) {
+						.then( function( res ) {
 							// clear the form
 							$scope.formData = {};
 
-							$scope.todos = data;
-							var cnt = 'added: ' + data[ data.length - 1 ].text;
+							$scope.todos = res;
+							var cnt = 'added: ' + res[ res.length - 1 ].text;
 
 							/**
 							 * @param {String} `cnt` [String contains text from last item of array
 							 * @param {Number} [delay parameter]
 							 */
 							DefaultService.showToast( cnt, 2000  );
-						}).error( function( err ) {
+						}, function( err ) {
 							console.log( 'Error: ' +  err );
 						});
 				}
@@ -52,10 +52,10 @@
 			 */
 			$scope.deleteTodo = function( id ) {
 				Todos.deleteTodoData( id )
-					.success( function( data ) {
-						$scope.todos = data;
+					.then( function( res ) {
+						$scope.todos = res;
 						DefaultService.showToast( 'Item deleted', 2000 );
-					}).error( function( err ) {
+					}, function( err ) {
 						console.log( 'Error: ' + err );
 					});
 			}
