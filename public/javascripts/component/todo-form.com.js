@@ -1,6 +1,6 @@
 'use strict';
 
-TodoApp.directive('todoForm', [function() {
+/*TodoApp.directive('todoForm', [function() {
 	// Runs during compile
 	return {
 		// name: '',
@@ -22,4 +22,14 @@ TodoApp.directive('todoForm', [function() {
 			
 		}
 	};
-}]);
+}]);*/
+
+TodoApp.component( 'todoForm', {
+	bindings: {
+		formDataText: '=',
+		create: '&'
+	},
+	templateUrl: 'templates/component/todo-form.com.html',
+	restrict: 'E',
+	replace: true
+});

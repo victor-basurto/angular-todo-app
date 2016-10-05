@@ -1,16 +1,17 @@
+<!-- Form Widget -->
 <div layout="row" flex>
 	<md-input-container flex="100" 
 		flex-gt-xs="33" 
 		flex-offset-gt-xs="33" 
 		class="md-icon-float md-block">
 		<label>Add a TODO/Things to do...</label>
-		<input type="text" ng-model="formDataText">
+		<input type="text" ng-model="$ctrl.formDataText">
 	</md-input-container><!-- ./ md-input-container -->
 	<!-- createTodo() will create new TODO -->
 	<div class="add-button">
 		<md-button md-no-ink 
 			class="md-primary"
-			ng-click="create()">
+			ng-click="$ctrl.create()">
 			Add
 		</md-button><!-- ./ md-button -->
 	</div><!-- ./ add-button -->

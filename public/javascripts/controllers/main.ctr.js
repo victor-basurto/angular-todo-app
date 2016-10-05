@@ -30,6 +30,7 @@
 						.then( function( res ) {
 							// clear the form
 							$scope.formData = {};
+							console.log(res);
 
 							$scope.todos = res;
 							var cnt = 'added: ' + res[ res.length - 1 ].text;

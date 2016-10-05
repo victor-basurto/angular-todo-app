@@ -31,8 +31,6 @@
 					DefaultService.showToast( $scope.formData.text + ' Added', 2000 );
 				}
 
-				// show toast
-
 				// clean the form
 				$scope.formData.text = '';
 

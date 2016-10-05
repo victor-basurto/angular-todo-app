@@ -13,7 +13,7 @@
 
 	<!-- Create TODOs -->
 	<form>
-		<!-- custom directive -->
+		<!-- custom component -->
 		<todo-form create="createTodo()" 
 			form-data-text="formData.text">
 		</todo-form><!-- ./ todo-form -->
@@ -24,12 +24,12 @@
 		<div flex="100" flex-gt-xs="33" flex-offset-gt-xs="33">
 			<!-- TODO: ng-repeat="todo in todos" -->
 			<div class="checkbox" ng-repeat="todo in todos track by $index">
-				<md-checkbox  ng-model="todo.selected" 
+				<md-checkbox  ng-model="todo.done" 
 					value="{{ todo.text }}" 
 					aria-label="todo.text">
 					<span class="underlines">{{ todo.text }}</span>
 				</md-checkbox><!-- ./ md-checkbox -->
-				<md-button md-no-ink class="md-warn" ng-if="todo.selected" 
+				<md-button md-no-ink class="md-warn" ng-if="todo.done" 
 					ng-click="deleteTodo(todo._id)">
 					<md-icon md-font-set="material-icons">delete_forever</md-icon>
 				</md-button><!-- ./ md-button -->
