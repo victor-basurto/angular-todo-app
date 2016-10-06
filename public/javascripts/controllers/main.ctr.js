@@ -30,7 +30,6 @@
 						.then( function( res ) {
 							// clear the form
 							$scope.formData = {};
-							console.log(res);
 
 							$scope.todos = res;
 							var cnt = 'added: ' + res[ res.length - 1 ].text;
@@ -44,6 +43,23 @@
 							console.log( 'Error: ' +  err );
 						});
 				}
+			}
+
+			/**
+			 * Update Todo Value
+			 * @param  {Key} `id` - item to be updated
+			 * @param  {Boolean} `item` - flag
+			 * @return {Object} `$scope.item` - new updated object
+			 */
+			$scope.updateDone = function( id, item ) {
+				$scope.formData.done = item;
+				
+				Todos.updateTodo( id, $scope.formData )
+					.then( function (res) {
+						$scope.item = res;
+					}, function( err ) {
+						console.log( 'Error ' + err );
+					});
 			}
 
 			/**

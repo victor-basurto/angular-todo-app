@@ -42,6 +42,25 @@
 		}
 
 		/**
+		 * [Update Todo Value]
+		 * @param  {Key} `id` - item to be updated
+		 * @param  {Object} `todoData` - object that holds value from user
+		 * @return {Promise}
+		 */
+		function updateTodo( id, todoData ) {
+			var defer = $q.defer();
+
+			$http.post( '/api/todos/' + id, todoData )
+				.success( function (res) {
+					defer.resolve( res );
+				}).error( function (err, status) {
+					defer.reject( err );
+				});
+
+			return defer.promise;
+		}
+
+		/**
 		 * [Delete a TODO]
 		 * @param  {Key} id [item to be deleted]
 		 * @return {Delete}    [item deleted]
@@ -63,6 +82,7 @@
 		return {
 			get: get,
 			create: create,
+			updateTodo: updateTodo,
 			deleteTodoData: deleteTodoData
 		}
 

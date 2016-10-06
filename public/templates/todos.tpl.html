@@ -25,7 +25,8 @@
 			<!-- TODO: ng-repeat="todo in todos" -->
 			<div class="checkbox" ng-repeat="todo in todos track by $index">
 				<md-checkbox  ng-model="todo.done" 
-					value="{{ todo.text }}" 
+					value="{{ todo.text }}"
+					ng-change="updateDone(todo._id, todo.done)" 
 					aria-label="todo.text">
 					<span class="underlines">{{ todo.text }}</span>
 				</md-checkbox><!-- ./ md-checkbox -->

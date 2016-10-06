@@ -49,6 +49,27 @@ module.exports = function( app ) {
 		});
 	});
 
+	// update a todo.done
+	app.post( '/api/todos/:todo_id', function (req, res) {
+		/**
+		 * pass id to match the item on the database and update the value
+		 * @param  {Object} `_id` - id value
+		 * @param  {Callback} get `err` and `todo`
+		 * @return {Method} `save` - once value is updated, then save it
+		 */
+		Todo.findOne({
+			_id: req.params.todo_id
+		}, function (err, todo) {
+			if ( err ) 
+				res.send( 'This is the error: ' + err );
+			
+			// update todo.done  with the value passed from the user
+			todo.done = req.body.done;
+			// save todo on db
+			todo.save();
+		});
+	});
+
 	// delete a todo
 	app.delete( '/api/todos/:todo_id', function(req, res) {
 		/**
