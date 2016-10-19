@@ -1,0 +1,46 @@
+<!-- Developer Dialog Content -->
+<md-dialog aria-label="{{ programmer.name }}">
+	<form action="" ng-cloak>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>{{ programmer.name }}</h2>
+				<span flex></span>
+				<md-button ng-click="cancel()">
+					<md-icon md-font-set="material-icons" aria-label="Close Dialog">clear</md-icon>
+				</md-button><!-- ./ md-button -->
+			</div><!-- ./ md-toolbar-tools -->
+		</md-toolbar><!-- ./ md-toolbar -->
+
+		<md-dialog-content>
+			<div class="md-dialog-content developer__dialog-content">
+				<div class="developer__image-holder">
+					<img ng-src="{{ programmer.images.personImage }}"
+						class="developer__image-holder--image" 
+						alt="{{ programmer.name }}"
+					/><!-- ./ img -->
+				</div><!-- ./ developer__image-holder -->
+				<h2>{{ programmer.name }}</h2>
+				<span class="md-subhead">{{ programmer.title }}</span>
+				<p>I'm {{ programmer.age }} years old.<br/>
+					I am a {{ programmer.title }} and "{{ programmer.desc.introDesc }}".<br/>
+					{{ programmer.desc.longDesc }}
+				</p>
+			</div><!-- ./ developer__dialog-content -->
+		</md-dialog-content><!-- ./ md-dialog-content -->
+
+		<md-dialog-actions layout="row">
+			<md-button ng-click="cancel()" md-autofocus>
+				Cancel
+			</md-button><!-- ./ md-button -->
+			<span flex></span>
+			<md-button ng-show="'{{programmer.urls.personalWebsite}}'" 
+					ng-href="{{ programmer.urls.personalWebsite }}"
+					 target="_blank">
+				{{ programmer.name }} Website
+			</md-button><!-- ./ md-button -->
+			<md-button ng-href="{{ programmer.urls.github }}" target="_blank">
+				My Github
+			</md-button><!-- ./ md-button -->
+		</md-dialog-actions><!-- ./ md-dialog-actions -->
+	</form><!-- ./ form -->
+</md-dialog><!-- ./ md-dialog -->

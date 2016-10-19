@@ -1,0 +1,16 @@
+<!-- developer card -->
+<md-card-title>
+	<md-card-title-text>
+		<span class="md-headline">{{ $ctrl.developerObject.name }}</span>
+		<span class="md-subhead">{{ $ctrl.developerObject.title }}</span>
+	</md-card-title-text><!-- ./ md-card-title-text -->
+	<md-card-title-media>
+		<div class="md-media-md card-media">
+			<img ng-src="{{ $ctrl.developerObject.avatar }}" alt="image">
+		</div><!-- ./ card-media -->
+	</md-card-title-media><!-- ./ md-card-title-media -->
+</md-card-title><!-- ./ md-card-title -->
+<md-card-actions layout="row" layout-align="end center">
+	<md-button ng-click="$ctrl.devInfo({id: $ctrl.developerObject.id}, $event)">More info</md-button>
+	<md-button>Projects</md-button>
+</md-card-actions><!-- ./ md-card-actions -->

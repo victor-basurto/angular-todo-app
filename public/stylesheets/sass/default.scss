@@ -36,4 +36,32 @@ main {
 			}
 		}
 	}
+
+}
+/*--------------------------------------------------------------------------
+	MdDialog Developer Content
+-----------------------------------------------------------------------------*/
+md-dialog {
+	.developer {
+		&__image-holder {
+			overflow: hidden;
+			float: right;
+
+			&--image {
+				height: 120px;
+				width: 120px;
+			}
+		}
+
+		&__dialog-content {
+			h2 {
+				margin: 0;
+			}
+			span {
+				font-size: 14px;
+				color: $clearlyGray;
+				font-style: italic;
+			}
+		}
+	}
 }

@@ -1,0 +1,17 @@
+{
+	"age": "23",
+	"id": "nestor_alcantara",
+	"name": "Nestor Alcantara",
+	"title": "Fron-End Engineer ",
+	"urls": {
+		"github": "https://github.com/nesgael"
+	},
+	"desc": {
+		"introDesc": "I love AngularJS Development",
+		"longDesc": "Coding all day long until my mind crashes, and then: Eat, Sleep, Code => Repeat"
+	},
+	"images": {
+		"avatar": "./images/nestor.jpg",
+		"personImage": "./images/developers/nestor.jpg"
+	}
+}

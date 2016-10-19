@@ -1,0 +1,18 @@
+{
+	"age": "30",
+	"id": "victor_basurto",
+	"name": "Victor Basurto",
+	"title": "MEAN-Stack Developer",
+	"urls": {
+		"github": "https://www.github.com/victor-basurto",
+		"personalWebsite": "https://victor-basurto.herokuapp.com"
+	},
+	"desc": {
+		"introDesc": "I love AngularJS Development",
+		"longDesc": "Coding all day long until my mind crashes, and then: Eat, Sleep, Code => Repeat"
+	},
+	"images": {
+		"avatar": "./images/image1.png",
+		"personImage": "./images/developers/vic.png"
+	}
+}

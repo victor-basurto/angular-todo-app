@@ -1,0 +1,24 @@
+[
+	{
+		"id": "victor_basurto",
+		"name": "Victor Basurto",
+		"title": "MEAN-Stack Developer",
+		"github": "https://www.github.com/victor-basurto",
+		"introDesc": "I love AngularJS Development",
+		"avatar": "./images/image1.png"
+	}, {
+		"id": "nestor_alcantara",
+		"name": "Nestor Alcantara",
+		"title": "BackboneJS - FrontEnd Engineer",
+		"github": "https://www.github.com/victor-basurto",
+		"introDesc": "Building complex applications is my specialty",
+		"avatar": "./images/image8.png"
+	},{
+		"id": "tristian_azuara",
+		"name": "Tristian Azuara",
+		"title": "Full-Stack Developer",
+		"github": "https://www.github.com/victor-basurto",
+		"introDesc": "Go-lang is the key for the future",
+		"avatar": "./images/image9.png"
+	}
+]

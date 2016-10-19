@@ -1,0 +1,8 @@
+<md-content class="md-padding" id="developer-card-info" layout-xs="column" layout="row">
+	<div flex-xs flex-gt-xs="33" layout="column" ng-repeat="developer in contributors">
+		<md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+			<!-- angular custom directive -->
+			<developer-card developer-object="developer" dev-info="moreInfo(id)"></developer-card>
+		</md-card><!-- ./ md-card -->
+	</div><!-- ng-repeat -->
+</md-content>

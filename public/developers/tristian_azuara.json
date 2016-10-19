@@ -1,0 +1,18 @@
+{
+	"age": "26",
+	"id": "tristian_azuara",
+	"name": "Tristian Azuara",
+	"title": "Software Engineer",
+	"urls": {
+		"github": "https://www.github.com/Triztian",
+		"personalWebsite": "http://tristian.us"
+	},
+	"desc": {
+		"introDesc": "GoLang Development is the key of the future",
+		"longDesc": "Software is the key to have a long life... "
+	},
+	"images": {
+		"avatar": "./images/tris.png",
+		"personImage": "./images/developers/tris.png"
+	}
+}

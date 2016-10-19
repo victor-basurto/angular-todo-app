@@ -24,10 +24,13 @@
 	<script src="./javascripts/app.js"></script>
 	<script src="./javascripts/controllers/main.ctr.js"></script>
 	<script src="./javascripts/controllers/todo-localStorage.ctr.js"></script>
+	<script src="./javascripts/controllers/about.ctr.js"></script>
 	<script src="./javascripts/component/todo-form.com.js"></script>
+	<script src="./javascripts/component/developer-card.com.js"></script>
 	<script src="./javascripts/services/todos.fac.js"></script>
 	<script src="./javascripts/services/localStorage-todos.fac.js"></script>
 	<script src="./javascripts/services/default-services.fac.js"></script>
+	<script src="./javascripts/services/about.fac.js"></script>
 </head>
 <body>
 	<!-- navigation -->
@@ -38,7 +41,9 @@
 					<span>Todo App</span>
 					<!-- fill up the space between left and right area -->
 					<span flex></span>
-					<md-button>Add a Todo</md-button>
+					<md-button><a ui-sref="todos">MongoDB Version</a></md-button>
+					<md-button><a ui-sref="todos-local">LocalStorage Version</a></md-button>
+					<md-button><a ui-sref="about">About</a></md-button>
 				</div><!-- ./ md-toolbar-tools -->
 			</md-toolbar><!-- ./ md-toolbar -->
 		</div><!-- ./ div -->
