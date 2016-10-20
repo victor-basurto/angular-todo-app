@@ -1,24 +1,25 @@
 /*--------------------------------
 	ng-animations
 ----------------------------------*/
-.listing.ng-enter, .listing.ng-move {
-	webkit-transition: 0.4s all;
-	moz-transition: 0.4s all;
-	ms-transition: 0.4s all;
-	o-transition: 0.4s all;
-	transition: 0.4s all;
-	opacity: 0;
-}
-
-.listing.ng-enter.ng-enter-active, .listing.ng-move.ng-move-active {
-	opacity: 1;
-}
-
-.listing.ng-leave {
+/*.listing.ng-leave {
 	animation: fade_listing;
 }
 
 @keyframes fade_listing {
 	from { opacity: 1; }
 	to { opacity: 0; }
+}*/
+.developer__display.ng-enter, 
+.developer__display.ng-move {
+	webkit-transition: 2s all;
+	moz-transition: 2s all;
+	ms-transition: 2s all;
+	o-transition: 2s all;
+	transition: 2s all;
+	opacity: 0;
+}
+
+.developer__display.ng-enter.ng-enter-active, 
+.developer__display.ng-move.ng-move-active {
+	opacity: 1;
 }

@@ -5,7 +5,9 @@
 		flex-offset-gt-xs="33" 
 		class="md-icon-float md-block">
 		<label>Add a TODO/Things to do...</label>
-		<input type="text" ng-model="$ctrl.formDataText">
+		<input type="text" ng-model="$ctrl.formDataText" 
+				ng-keydown="($event.which == 13) ? $ctrl.create() : return"
+		/><!-- input -->
 	</md-input-container><!-- ./ md-input-container -->
 	<!-- createTodo() will create new TODO -->
 	<div class="add-button">

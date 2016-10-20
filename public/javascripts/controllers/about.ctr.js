@@ -32,8 +32,8 @@
 						clickOutsideToClose: true,
 						fullscren: $scope.customFullscreen
 					});
-				}, function( err, status ) {
-					console.log( 'Err: ' + err + '\nStatus: ' + status  );
+				}, function( err ) {
+					console.log( 'Err: ' + err  );
 				});
 		}
 

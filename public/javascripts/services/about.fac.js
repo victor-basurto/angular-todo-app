@@ -37,8 +37,8 @@
 			$http.get( _SINGLE_DEVELOPER + id + '.json' )		// concat path, id and extension
 				.success( function(res) {
 					defer.resolve( res );
-				}).error( function(err, status) {
-					defer.reject( err, status );
+				}).error( function(err) {
+					defer.reject( err );
 				});
 
 			return defer.promise;

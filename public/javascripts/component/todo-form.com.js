@@ -30,4 +30,4 @@
 		restrict: 'E',
 		replace: true
 	});
-});
+})();

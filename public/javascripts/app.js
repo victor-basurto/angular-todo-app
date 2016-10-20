@@ -4,7 +4,7 @@
 *
 * Description
 */
-var TodoApp = angular.module('TodoApp', ['ngMaterial', 'ui.router']);
+var TodoApp = angular.module('TodoApp', ['ngMaterial', 'ui.router', 'ngAnimate']);
 
 /**
  * Configuration
