@@ -1,5 +1,5 @@
-var express  	= require('express');
-var app		= express();
+var express  	= require('express'),
+	app = express();
 // load the todo model
 var Todo = require( './models/todo' );
 
@@ -57,7 +57,7 @@ module.exports = function( app ) {
 		 * @param  {Callback} get `err` and `todo`
 		 * @return {Method} `save` - once value is updated, then save it
 		 */
-		Todo.findOne({
+		Todo.findById({
 			_id: req.params.todo_id
 		}, function (err, todo) {
 			if ( err ) 

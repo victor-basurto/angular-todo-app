@@ -25,11 +25,20 @@
 			<!-- TODO: ng-repeat="todo in todos" -->
 			<div class="checkbox" ng-repeat="todo in todos track by $index">
 				<md-checkbox  ng-model="todo.done" 
+					ng-show="!todo.isChecked"
 					value="{{ todo.text }}"
 					ng-change="updateDone(todo._id, todo.done)" 
 					aria-label="todo.text">
 					<span class="underlines">{{ todo.text }}</span>
 				</md-checkbox><!-- ./ md-checkbox -->
+				<!-- default checkbox -->
+				<md-checkbox ng-show="todo.isChecked"
+					ng-disabled="todo.isChecked"
+					value="{{ todo.text }}"
+					aria-label="todo.text">
+					<span>{{ todo.text }}</span>
+				</md-checkbox><!-- ./ md-checkbox -->
+				<!-- end default checkbox -->
 				<md-button md-no-ink class="md-warn" ng-if="todo.done" 
 					ng-click="deleteTodo(todo._id)">
 					<md-icon md-font-set="material-icons">delete_forever</md-icon>

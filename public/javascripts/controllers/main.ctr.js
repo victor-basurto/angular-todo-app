@@ -15,7 +15,16 @@
 			 */
 			Todos.get().then( function( res ) {
 				$scope.todos = res;
-				console.log( 'This is the data: ' , res );
+
+				// set default value if there's no data on MongoDB
+				if ( isEmpty( $scope.todos ) ) {
+					var res = {
+						text: 'Default text - Add a TODO',
+						isChecked: true
+					}
+					$scope.todos.push(res);
+				}
+				console.log( 'This is the data: ', res );
 			}, function( err ) {
 				console.log( 'Error:' + err );
 			});
@@ -75,6 +84,20 @@
 					}, function( err ) {
 						console.log( 'Error: ' + err );
 					});
+			}
+
+			/**
+			 * Check if object is empty
+			 * @param  {Object} `obj` - [object to be compared]
+			 * @return {Boolean}  if empty object return false, otherwise return true
+			 */
+			function isEmpty( obj ) {
+				for ( var prop in obj ) {
+					if ( obj.hasOwnProperty( prop ) ) {
+						return false;
+					}
+				}
+				return true;
 			}
 	}]);
 })();

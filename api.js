@@ -1,10 +1,10 @@
-var express  	= require('express');
-var mongoose 	= require('mongoose');
-var morgan   	= require('morgan');			// log request to console
-var bodyParser = require('body-parser');		// pull information from HTML POST (express4)
-var methodOverride = require('method-override'); 	// simulate DELETE and PUT (express4)
-var urlConnection = require('./config/database');
-var app      	= express();
+var express = require('express'),
+	mongoose 	= require('mongoose'),
+	morgan = require('morgan'),			// log request to console
+	bodyParser = require('body-parser'),		// pull information from HTML POST (express4)
+	methodOverride = require('method-override'), 	// simulate DELETE and PUT (express4)
+	urlConnection = require('./config/database'),
+	app = express();
 
 // set the port 
 var port = process.env.PORT || 8000;
