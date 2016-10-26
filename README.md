@@ -12,14 +12,18 @@ It's a **Basic _TODO-App_** that includes: **localStorage** & **MongoDB Storage*
 > Still under development!, main point is to show examples of:
 >
 > * CRUD-Operations
-> * Custom directives
+> * Custom directives & Custom Components
 > * Custom Services
 
 Add things you have in mind, and start playing with it!
 
-Data retrieved from DB its invoked through angular factory and then populated into front end.
+Data retrieved from DB its invoked through angular factory and then populated into Front-end [data collection is dropped 5 minutes after its created].
 
-Both examples shared same create TODO form, which considered as a widget, it contains its own custom directive.
+Both examples shared same create TODO form, which is considered as a widget, it contains its own custom *Component*.
+
+Take a look and feel free to add what you want... or be part of it...
+
+https://angular-simple-todoapp.herokuapp.com/#/todos
 
 **images**:
 
