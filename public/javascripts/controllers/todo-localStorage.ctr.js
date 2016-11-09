@@ -2,10 +2,11 @@
 	'use strict';
 	TodoApp.controller( 'LocalTodo', [
 		'$scope', 
+		'$rootScope',
 		'$timeout', 
 		'LocalTodos',
 		'DefaultService',
-		function( $scope, $timeout, LocalTodos, DefaultService ) {
+		function( $scope, $rootScope, $timeout, LocalTodos, DefaultService ) {
 			
 			$scope.title = 'LocalStorage';
 			$scope.formData = {};
@@ -49,6 +50,14 @@
 				DefaultService.showToast( 'Item Deleted', 1000 );
 				// set new values to todos object
 				localStorage.setItem( 'todos', JSON.stringify( $scope.todos ) );
+			}
+
+			$rootScope.openSidenav = function() {
+				DefaultService.openNav( 'left' );
+			}
+
+			$rootScope.closeSidenav = function() {
+				DefaultService.closeNav( 'left' );
 			}
 	}]);
 })();

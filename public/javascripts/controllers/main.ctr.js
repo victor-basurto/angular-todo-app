@@ -1,11 +1,13 @@
 (function() {
 	'use strict';
 	TodoApp.controller('MainCtrl', [ 
-		'$scope', 
+		'$scope',
+		'$rootScope',
 		'$http', 
 		'Todos',
 		'DefaultService', 
-		function( $scope, $http, Todos, DefaultService ) {
+		function( $scope, $rootScope, $http, Todos, DefaultService ) {
+
 
 			$scope.formData = {};
 			/**
@@ -84,6 +86,17 @@
 					}, function( err ) {
 						console.log( 'Error: ' + err );
 					});
+			}
+
+			/**
+			 * Open and Close sidenav
+			 */
+			$rootScope.openSidenav = function() {
+				DefaultService.openNav( 'left' );
+			}
+
+			$rootScope.closeSidenav = function() {
+				DefaultService.closeNav( 'left' );
 			}
 
 			/**

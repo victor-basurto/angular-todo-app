@@ -1,6 +1,6 @@
 (function() {
 	'use strict';
-	TodoApp.controller( 'AboutCtrl', ['$scope', '$mdDialog', 'About', function( $scope, $mdDialog, About ) {
+	TodoApp.controller( 'AboutCtrl', ['$scope', '$rootScope', '$mdDialog', 'About', 'DefaultService', function( $scope, $rootScope, $mdDialog, About, DefaultService ) {
 		/**
 		 * get data from backend
 		 * @param {Object} `res` - response from backend
@@ -58,6 +58,14 @@
 			$scope.cancel = function() {
 				$mdDialog.cancel();
 			}
+		}
+
+		$rootScope.openSidenav = function() {
+			DefaultService.openNav( 'left' );
+		}
+
+		$rootScope.closeSidenav = function() {
+			DefaultService.closeNav( 'left' );
 		}
 	}]);
 })();

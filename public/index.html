@@ -2,7 +2,7 @@
 <html lang="en" ng-app="TodoApp">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">
 	<title>Todo App</title>
 
 	<link rel="stylesheet" href="./javascripts/libs/angular-material/angular-material.css">
@@ -39,10 +39,11 @@
 			<md-toolbar>
 				<div class="md-toolbar-tools">
 					<span>Todo App</span>
+					<md-button ng-click="openSidenav()">
+						versions
+					</md-button>
 					<!-- fill up the space between left and right area -->
 					<span flex></span>
-					<md-button><a ui-sref="todos">MongoDB Version</a></md-button>
-					<md-button><a ui-sref="todos-local">LocalStorage Version</a></md-button>
 					<md-button><a ui-sref="about">About</a></md-button>
 				</div><!-- ./ md-toolbar-tools -->
 			</md-toolbar><!-- ./ md-toolbar -->
@@ -52,6 +53,20 @@
 	<main>
 		<ui-view></ui-view>
 	</main>
-	
+
+	<!-- Side Nav Content -->
+	<md-sidenav class="md-sidenav-left md-whiteframe-4dp" md-component-id="left">
+		<md-toolbar class="md-theme-light">
+			<h1 class="md-toolbar-tools">Sidenav Right</h1>
+		</md-toolbar><!-- ./ md-toolbar -->
+		<md-content layout-padding>
+			<md-button><a ui-sref="todos">MongoDB Version</a></md-button>
+			<md-button><a ui-sref="todos-local">LocalStorage Version</a></md-button>
+			<md-button ng-click="closeSidenav()" class="md-primary">
+				Close 
+			</md-button><!-- ./ md-button -->
+		</md-content><!--./ md-content -->
+	</md-sidenav><!-- ./ md-sidenav -->
+	<!-- End Side Nav Content -->
 </body>
 </html>
